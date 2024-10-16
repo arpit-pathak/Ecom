@@ -13,7 +13,6 @@
   height: 52.2px;
 }
 
-
 #inputError {
   color: red;
   border-color: red;
@@ -177,8 +176,6 @@ input[type="number"] {
   cursor: pointer;
 }
 
-
-
 .focused {
   border: 2px solid #bdb8b7; /* Change the color to the desired color */
 }
@@ -236,15 +233,15 @@ input[type="number"] {
   border-color: orange; /* Change border color on hover */
 }
 
-.bg-pendingStatus{
-  background-color: #ECC521;
+.bg-pendingStatus {
+  background-color: #ecc521;
 }
 
-.bg-returnrefund{
-  background-color: #5766EB;
+.bg-returnrefund {
+  background-color: #5766eb;
 }
 
-.bg-cancelled{
+.bg-cancelled {
   background-color: #e21b1bc7;
 }
 
@@ -283,7 +280,14 @@ input[type="number"] {
   font-size: 16px;
   font-weight: bold;
   text-align: center;
-  background:  #4169E1 !important;
-  --toastify-font-family:Poppins;
-  --toastify-text-color-light:white;
+  background: #4169e1 !important;
+  --toastify-font-family: Poppins;
+  --toastify-text-color-light: white;
+}
+
+.scroll-container {
+  scroll-behavior: smooth; /* Enables smooth scrolling */
+  overflow-x: auto; /* Allow horizontal scrolling */
+  overflow-y: hidden; /* Prevent vertical scrolling */
+  white-space: nowrap; /* Keep items in a single line */
 }

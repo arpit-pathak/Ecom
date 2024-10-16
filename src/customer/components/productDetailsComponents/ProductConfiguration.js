@@ -1393,12 +1393,12 @@ function ProductConfiguration() {
                 </p>
               </section>
               <ProductReviewRating productDetail={productDetail} />
-
-              <ScrollingProductList
-                title="From the Same Shop"
-                prodSlug={slug}
-              />
-
+              <div className="scroll-container">
+                <ScrollingProductList
+                  title="From the Same Shop"
+                  prodSlug={slug}
+                />
+              </div>
               <ScrollingProductList title="Related Products" prodSlug={slug} />
             </div>
           </div>
