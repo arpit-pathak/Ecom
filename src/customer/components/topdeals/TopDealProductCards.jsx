@@ -197,7 +197,7 @@ const TopDealProductCards = ({ product }) => {
 
       <div className="flex flex-col px-4 pt-3 pb-1 h-[100px] md:h-[114px] justify-between">
         <p className="text-xs md:text-sm font-semibold text-wrap">
-          {trimName(product.name, 30)}
+          {trimName(product.name, 50)}
         </p>
 
         <div className="flex flex-col">
