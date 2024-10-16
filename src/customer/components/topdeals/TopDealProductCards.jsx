@@ -196,12 +196,14 @@ const TopDealProductCards = ({ product }) => {
       )}
 
       <div className="flex flex-col px-4 pt-3 pb-1 h-[100px] md:h-[114px] justify-between">
-        <p className="text-xs md:text-sm font-semibold text-wrap">
+        <p className="capitalize text-black w-full break-normal text-sm font-medium
+                  overflow-hidden text-ellipsis max-[530px]:text-xs max-[415px]:text-[10px]
+                  h-[38px] flex flex-col justify-start leading-tight">
           {trimName(product.name, 50)}
         </p>
 
         <div className="flex flex-col">
-          <div className="flex flex-wrap pt-1 md:pt-4">
+          <div className="flex flex-wrap pt-1 md:pt-1">
             <p className="text-[#FF9100] text-poppins flex items-center">
               {/* <FaDollarSign size={30} /> */}
               <span className="font-semibold text-lg leading-8 md:text-[26px] max-[530px]:text-sm max-[415px]:text-sm">
