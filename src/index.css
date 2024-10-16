@@ -1,0 +1,330 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+@import "./css/ckeditor.css";
+@import url("https://fonts.googleapis.com/css?family=Playfair Display");
+
+@media (max-width: 768px) {
+  #zs-fl-tip {
+    display: none !important;
+  }
+}
+
+@layer base {
+  ol {
+    list-style: revert;
+    margin: revert;
+    padding: revert;
+    font-family: "Poppins";
+    font-size: 14px;
+  }
+}
+
+.text-orange {
+  color: #f5ab35;
+}
+
+.text-grey {
+  color: #828282;
+}
+
+.search-q {
+  display: block;
+}
+
+.search-q li {
+  display: inline-block;
+  margin-right: 12px;
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+
+.search-q li:hover {
+  color: #000;
+}
+
+.vl {
+  border-left: 2px solid White;
+  left: 50%;
+  height: 80%;
+  margin-top: 2px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.slider-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  padding-top: 1.25rem /* 20px */;
+  padding-bottom: 1.25rem /* 20px */;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item-slider {
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  overflow-x: scroll;
+  /* ms-overflow-style: none; */
+}
+
+.chevron-arrow {
+  opacity: 50%;
+  cursor: pointer;
+}
+
+.chevron-arrow:hover {
+  opacity: 100%;
+}
+
+.divider-text {
+  position: relative;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.divider-text > div {
+  height: 1px;
+  width: 100%;
+  background-color: #dbdbdb;
+  position: absolute;
+  top: 28px;
+}
+
+.divider-text > span {
+  position: relative;
+  z-index: 2;
+  font-size: 16px;
+  background-color: white;
+  padding: 0 10px;
+  font-weight: 500;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+#hero {
+  background-image: url("../src/assets/bg-login.png");
+  background-repeat: no-repeat;
+  height: 80vh;
+  background-size: cover;
+}
+
+#links {
+  background-color: #f6f6f6;
+}
+
+#navbar,
+#sidenavHeader {
+  background-color: rgb(255, 165, 0);
+  background: linear-gradient(
+    180deg,
+    #ec8f04 0%,
+    #f3a429 36.46%,
+    #f3a429 53.65%,
+    #f3a429 76.56%,
+    #f3a429 79.17%,
+    #f5ab35 100%
+  );
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #f5ab35;
+}
+
+.btn-outline-white,
+.btn-white {
+  transition: all ease 0.4s;
+}
+
+.btn-outline-white:hover {
+  outline-color: #fff;
+  background: #fff;
+  color: #f5ab35;
+}
+
+.btn-white:hover {
+  color: #fff;
+  background: #f5ab35;
+}
+
+/*burger icon*/
+#site-burger {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  margin: 15px 0 10px 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+#site-burger span {
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 50%;
+  background: #fff;
+  opacity: 1;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+#site-burger span:nth-child(even) {
+  left: 50%;
+  border-radius: 0 9px 9px 0;
+}
+
+#site-burger span:nth-child(odd) {
+  left: 0px;
+  border-radius: 9px 0 0 9px;
+}
+
+#site-burger span:nth-child(1),
+#site-burger span:nth-child(2) {
+  top: 0px;
+}
+
+#site-burger span:nth-child(3),
+#site-burger span:nth-child(4) {
+  top: 10px;
+}
+
+#site-burger span:nth-child(5),
+#site-burger span:nth-child(6) {
+  top: 20px;
+}
+
+#site-burger.open span:nth-child(1),
+#site-burger.open span:nth-child(6) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#site-burger.open span:nth-child(2),
+#site-burger.open span:nth-child(5) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#site-burger.open span:nth-child(1) {
+  left: 0;
+  top: 7px;
+}
+
+#site-burger.open span:nth-child(2) {
+  left: calc(50% - 0px);
+  top: 7px;
+}
+
+#site-burger.open span:nth-child(3) {
+  left: -50%;
+  opacity: 0;
+}
+
+#site-burger.open span:nth-child(4) {
+  left: 100%;
+  opacity: 0;
+}
+
+#site-burger.open span:nth-child(5) {
+  left: 0px;
+  top: 29px;
+}
+
+#site-burger.open span:nth-child(6) {
+  left: calc(50% - 0px);
+  top: 29px;
+}
+
+.welcomeVoucherClass {
+  background-image: url("./assets/buyer/welcomeVoucher.png");
+  background-repeat: no-repeat;
+  object-fit: contain;
+  height: 400px;
+  width: 330px;
+}
+
+/*nav icon burger*/
+
+.prod-desc ul {
+  all: unset;
+}
+
+.prod-desc img {
+  all: unset;
+  max-width: 100%;
+}
+
+.prod-desc .image {
+  display: flex;
+  justify-content: center;
+}
+
+.prod-desc .image-style-side {
+  justify-content: flex-end;
+}
+
+.prod-desc table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.prod-desc .table,
+.prod-desc th,
+.prod-desc td {
+  margin: 0 auto;
+  border-collapse: collapse;
+  border: 1px solid black;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Hide scrollbar for Webkit browsers (Chrome, Safari, Edge) */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+}
+
+/* For better compatibility */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

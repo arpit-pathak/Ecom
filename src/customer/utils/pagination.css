@@ -1,0 +1,11 @@
+.selectBox {
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+

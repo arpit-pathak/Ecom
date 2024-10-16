@@ -1,0 +1,160 @@
+.buyer-page .pagination {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+  }
+  
+  .buyer-page .pagination .entry {
+    float: left;
+  }
+  
+  .buyer-page .pagination .entry select {
+    width: 50px;
+    height: 24px;
+    margin-right: 5px;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 2px 0px 2px 5px;
+    background-position-x: 98%;
+    background-position-y: 0px;
+    border: 1px solid #C1C1C1;
+    border-radius: 6px;
+  }
+  
+  .buyer-page .pagination .pager {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 50%;
+    font-size: 14px;
+    color: rgba(42, 42, 42, 0.7);
+    text-align: center;
+  
+  }
+  
+  .buyer-page .pagination .pager ul {
+    float: left;
+    margin-left: 12px;
+    margin-right: 12px;
+    position: relative;
+    top: -3px;
+  }
+  
+  .buyer-page .pagination .pager ul li {
+    padding: 5px 12px;
+    text-align: center;
+    background: rgba(245, 171, 53, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all ease 0.4s;
+    display: inline-block;
+    margin-right: 12px;
+    color: #333333;
+  }
+  
+  .buyer-page .pagination .pager ul li:last-child {
+    margin-right: 0;
+  }
+  
+  .buyer-page .pagination .pager ul li:hover,
+  .buyer-page .pagination .pager ul li.active {
+    background-color: #F5AB35;
+    color: #fff;
+  }
+  
+  .buyer-page .pagination .pager .controls {
+    cursor: pointer;
+  }
+  
+  .buyer-page .pagination .pager .controls span {
+    text-decoration-line: underline;
+  }
+  
+  .buyer-page .pagination .pager .controls:first-child {
+    float: left;
+  }
+  
+  .buyer-page .pagination .pager .controls:last-child {
+    float: right;
+  }
+  
+  .buyer-page .pagination .pager .controls span,
+  .buyer-page .pagination .pager .controls svg {
+    display: inline-block;
+  }
+  
+  .buyer-page .pagination .entry span,
+  .buyer-page .pagination .showing {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #333333;
+  }
+  
+  .buyer-page .pagination .showing {
+    float: right;
+  }
+  
+  
+  
+  .buyer-page .pagination .orders_pages_pager {
+    position: absolute;
+    margin: 0 auto;
+    left: auto;
+    right: 0;
+    font-size: 14px;
+    color: rgba(42, 42, 42, 0.7);
+    text-align: right;
+  }
+  
+  .buyer-page .pagination .orders_pages_pager ul {
+    float: left;
+    margin-left: 12px;
+    margin-right: 12px;
+    position: relative;
+    top: -3px;
+  }
+  
+  .buyer-page .pagination .orders_pages_pager ul li {
+    padding: 5px 12px;
+    text-align: center;
+    background: rgba(245, 171, 53, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all ease 0.4s;
+    display: inline-block;
+    margin-right: 12px;
+    color: #333333;
+  }
+  
+  .buyer-page .pagination .orders_pages_pager ul li:last-child {
+    margin-right: 0;
+  }
+  
+  .buyer-page .pagination .orders_pages_pager ul li:hover,
+  .buyer-page .pagination .orders_pages_pager ul li.active {
+    background-color: #F5AB35;
+    color: #fff;
+  }
+  
+  .buyer-page .pagination .orders_pages_pager .controls {
+    cursor: pointer;
+  }
+  
+  .buyer-page .pagination .orders_pages_pager .controls span {
+    text-decoration-line: underline;
+  }
+  
+  .buyer-page .pagination .orders_pages_pager .controls:first-child {
+    float: left;
+  }
+  
+  .buyer-page .pagination .orders_pages_pager .controls:last-child {
+    float: right;
+  }
+  
+  .buyer-page .pagination .orders_pages_pager .controls span,
+  .buyer-page .pagination .orders_pages_pager .controls svg {
+    display: inline-block;
+  }

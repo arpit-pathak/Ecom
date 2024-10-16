@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" data-rh="true" />
+    <meta name="google-site-verification" content="gxvYa4BOz_HheoaqXhFEDTpH5V206x-c9R4ImD1nlbo" />
+    <meta name="description"
+      content="uShop same day online shopping - get everything on the same day!"
+      data-rh="true" />
+    <meta property="og:title" content="UShop" data-rh="true" />
+    <meta property="og:description"
+      content="uShop same day online shopping - get everything on the same day!"
+      data-rh="true" />
+    <meta property="og:image"
+      content="https://ushopweb.s3.ap-southeast-1.amazonaws.com/static-contents/ushop-logo-200x200.png"
+      data-rh="true" />
+    <meta property="og:url" content="https://www.ushop.market/" data-rh="true" />
+    <meta property="og:type" content="website" data-rh="true" />
+    <meta property="fb:app_id" content="663909048865152"data-rh="true" />
+
+    <link rel="icon" href="%PUBLIC_URL%/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon/favicon-16x16.png">
+    <link rel="manifest" href="%PUBLIC_URL%/favicon/site.webmanifest">
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>uShop</title>
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <div id="portal"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+  <script crossorigin="anonymous" integrity="sha384-Ft/vb48LwsAEtgltj7o+6vtS2esTU9PCpDqcXs4OCVQFZu5BqprHtUCZ4kjK+bpE"
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js">
+    </script>
+  <script>
+    //OTP JS SCRIPT
+    $(document).on("keyup", ".digit-group input", function (e) {
+      var parent = $($(this).parent());
+      if (e.keyCode === 8 || e.keyCode === 37) {
+        var prev = parent.find("input#" + $(this).data("previous"));
+        if (prev.length) {
+          $(prev).select();
+        }
+      } else if ((e.keyCode >= 48 && e.keyCode <= 57) ||
+        (e.keyCode >= 65 && e.keyCode <= 90) ||
+        (e.keyCode >= 96 && e.keyCode <= 105) ||
+        e.keyCode === 39
+      ) {
+        var next = parent.find("input#" + $(this).data("next"));
+        if (next.length) {
+          $(next).select();
+        } else {
+          if (parent.data("autosubmit")) {
+            parent.submit();
+          }
+        }
+      }
+    });
+
+    //custom flag dropdown script
+    $(document).on("click", ".dropbtn", function (e) {
+      e.preventDefault();
+      //var dropopts = $(this).parent().find(".options");
+      //$(dropopts).show();
+    });
+    $(document).on("click", ".country-code-drop > .options > div", function (e) {
+      //var dropopts = $(this).parent();
+      //$(dropopts).hide();
+    });
+
+    //custom find from script
+    $(document).on("click", ".from-btn", function (e) {
+      e.preventDefault();
+      var dropopts = $(this).parent().find(".options");
+      $(dropopts).show();
+    });
+    $(document).on("click", ".find-from-drop > .options > div", function (e) {
+      var dropopts = $(this).parent();
+      $(dropopts).hide();
+    });
+
+    //show password
+    $(document).on('click', '.show-pass', function () {
+      var isPassShown = $(this).data('shown') == "1" ? true : false;
+      var passInput = $(this).parent().find('input');
+      isPassShown ? $(passInput).prop('type', 'password') : $(passInput).prop('type', 'text');
+      $(this).data('shown', isPassShown ? '0' : '1');
+    });
+
+    //merchant sidebar
+    $(document).on('click', '.m-sidebar > div > div', function () {
+      //remove current active
+      var currentActive = $(this).parent().parent().find(".active");
+      if (!$(this).parent().hasClass("active")) $(this).parent().addClass("active");
+      $(currentActive).removeClass("active");
+    });
+
+    //merchant accordion
+    $(document).on('click', ".l2-body .accordion-tab", function () {
+      if ($(this).hasClass("opened")) {
+        $(this).removeClass('opened');
+        $(this).find(".accordion-open").show();
+        $(this).find(".accordion-close").hide();
+        $(this).next().show();
+      } else {
+        $(this).addClass('opened');
+        $(this).find(".accordion-close").show();
+        $(this).find(".accordion-open").hide();
+        $(this).next().hide();
+      }
+    });
+
+    //merchant image/video upload
+    $(document).on("click", ".up-img img", function () {
+      var fileinput = $(this).parent().find("input[type=file]");
+      var addimagebtn = $(this).parent();
+      var imageInputs = $(addimagebtn).parent().children();
+      if (fileinput.length == 0) {
+        //add image
+        console.log("add image > " + $(imageInputs).length);
+        var count = $(addimagebtn).data("count");
+        if ((count + 1) >= ($(imageInputs).length - 1)) {
+          $(addimagebtn).hide();
+          return;
+        }
+        $(imageInputs).eq(count + 1).show();
+        $(addimagebtn).data("count", count + 1);
+      } else {
+        $(fileinput).trigger('click');
+      }
+    });
+    $(document).on("click", ".up-vid img", function () {
+      var fileinput = $(this).parent().find("input[type=file]");
+      $(fileinput).trigger('click');
+    });
+
+    // merchant product legend 
+    $(document).on("click", ".l2-legend > ul > li > a", function () {
+      var thisLinkLi = $(this).parent();
+      var thisUlChilds = $(thisLinkLi).parent().children();
+      var idx = $(thisUlChilds).index(thisLinkLi) + 1;
+      var lenpercent = (idx / $(thisUlChilds).length) * 100;
+
+      //change height of bar
+      //console.log(lenpercent); 
+      var spanBar = $(thisLinkLi).parent().parent().find(".bar").children()[0];
+      animateSpanBar(spanBar, lenpercent);
+    });
+    function animateSpanBar(spanBar, lenpercent) {
+      $(spanBar).animate({ height: lenpercent + '%' }, 500, function () {
+        $(spanBar).css("height", lenpercent + "%");
+      });
+    };
+
+    //shipping accordion
+    $(document).on("click", ".ship-accordion > .header", function () {
+      var thisbody = $(this).parent().find(".body");
+      if ($(this).hasClass("opened")) {
+        $(thisbody).hide();
+        $(this).removeClass("opened");
+        $(this).find(".accordion-open").show();
+        $(this).find(".accordion-close").hide();
+        return;
+      }
+      $(thisbody).show();
+      $(this).addClass("opened");
+      $(this).find(".accordion-open").hide();
+      $(this).find(".accordion-close").show();
+    });
+
+    $(document).on("click", ".variant-img", function () {
+      $(this).parent().find("input").click();
+    });
+
+    $(document).on("click", ".checkmark", function () {
+      $(this).parent().find("input").click();
+    });
+
+    //merchant > add edit product > variant section
+    let timer;              // Timer identifier
+    const waitTime = 500;   // Wait time in milliseconds 
+    $(document).on("keyup", ".variant-option-input", function () {
+      var update_var = $(this).parent().find(".update-variant");
+      // Clear timer
+      clearTimeout(timer);
+
+      // Wait for X ms and then process the request
+      timer = setTimeout(() => {
+        $(update_var).click();
+      }, waitTime);
+    });
+
+    //switch product view
+    $(document).on("click", ".table-view", function () {
+      var selected = $(this).find(".selected");
+      var switchbtn = $(this).find('.switch');
+      if ($(selected).data('selected') == "0") {
+        var right = $(this).innerWidth() - 37;
+        $(switchbtn).css({ left: "3px" }).animate({ "left": right + "px" }, "slow");
+
+        $(selected).removeClass("selected");
+        $("#view-grid").addClass("selected");
+
+        //$(switchbtn).html($("#view-grid").html());
+      } else {
+        var left = $(this).innerWidth() - 30;
+        $(switchbtn).css({ left: left }).animate({ "left": "3px" }, "slow");
+
+        $(selected).removeClass("selected");
+        $("#view-list").addClass("selected");
+
+        //$(switchbtn).html($("#view-list").html());
+      }
+    });
+
+
+    //ready
+    $(document).ready(function () {
+      //merchant sidebar
+      $(".merchant-db .menu input").click(function () {
+        $(".m-sidebar").hide();
+        if ($(this).is(":checked")) {
+          $(".m-sidebar").show();
+        }
+      });
+
+      var sectionid = document.location.hash;
+      var sections = $(sectionid).parent().children();
+      var spanBar = $(".bar > span");
+      if (spanBar.length > 0) {
+        var lenpercent = $(sections).index($(sectionid)) + 1;
+        lenpercent = (lenpercent / $(sections).length) * 100;
+        animateSpanBar(spanBar, lenpercent);
+      }
+
+      //merchant product
+      var addproductfound = $(".add-edit-product");
+      var currentSpanBarPercent = 0;
+      if (addproductfound.length > 0) {
+        //scroll event
+        /*
+        $(window).scroll(function () {
+          //console.log($(window).scrollTop());
+          //console.log($(window).innerHeight());
+          //console.log($("#product-details")[0].scrollHeight);
+          //console.log(currentSpanBarPercent);
+  
+          var scrollH = $(window).scrollTop() + $(window).scrollTop();
+          //console.log("current scroll: " + scrollH);
+          if (scrollH >= ($("#optional-details")[0].scrollHeight + $("#shipping-details")[0].scrollHeight
+            + $("#product-details")[0].scrollHeight + $("#product-variants")[0].scrollHeight)) {
+            $(".update-section4").click();
+          }
+          else if (scrollH >= ($("#shipping-details")[0].scrollHeight
+            + $("#product-details")[0].scrollHeight + $("#product-variants")[0].scrollHeight + 1000)) {
+            //console.log("end of section 2: " + ($("#product-details")[0].scrollHeight + $("#product-variants")[0].scrollHeight));
+            $(".update-section3").click();
+            if (currentSpanBarPercent != 100) {
+              currentSpanBarPercent = 100;
+              animateSpanBar(spanBar, currentSpanBarPercent);
+            }
+          }
+          else if (scrollH >= ($("#product-details")[0].scrollHeight
+            + $("#product-variants")[0].scrollHeight + 1000)) {
+            //console.log("end of section 2: " + ($("#product-details")[0].scrollHeight + $("#product-variants")[0].scrollHeight));
+            $(".update-section2").click();
+            if (currentSpanBarPercent != 75) {
+              currentSpanBarPercent = 75;
+              animateSpanBar(spanBar, currentSpanBarPercent);
+            }
+          }
+          else if (scrollH >= ($("#product-details")[0].scrollHeight + 500)) {
+            //console.log("end of section 1: " + $("#product-details")[0].scrollHeight);
+            $(".update-section1").click();
+            if (currentSpanBarPercent != 50) {
+              currentSpanBarPercent = 50;
+              animateSpanBar(spanBar, currentSpanBarPercent);
+            }
+          } else if (scrollH < $("#product-details")[0].scrollHeight) {
+            if (currentSpanBarPercent != 25) {
+              currentSpanBarPercent = 25;
+              animateSpanBar(spanBar, currentSpanBarPercent);
+            }
+          }
+  
+        });
+        */
+      }
+
+      //select checkbox
+      $('.checkoption').click(function () {
+        $('.checkoption').not(this).prop('checked', false);
+      });
+    });
+
+
+  </script>
+
+  <!-- refer us-861 for zoho live chat -->
+  <script>
+    const currentPath = window.location.pathname;
+
+    // Load Zoho SalesIQ widget unless it's the admin page
+    if (!currentPath.includes("admin")) {
+      window.$zoho = window.$zoho || {};
+      $zoho.salesiq = $zoho.salesiq || { ready: function () {} };
+      var d = document;
+      var s = d.createElement('script');
+      s.type = 'text/javascript';
+      s.id = 'zsiqscript';
+      s.defer = true;
+      s.src = 'https://salesiq.zohopublic.com/widget?wc=siqb66095b3be164bd1a0bcdffa5757a56f';
+      var t = d.getElementsByTagName('script')[0];
+      t.parentNode.insertBefore(s, t);
+    }
+
+    // Add styles based on the current page
+    if (currentPath === "/chats/") {
+      // Hide the chat widget on the /chats/ page
+      const styleTag = document.createElement('style');
+      styleTag.innerHTML = `
+        #zsiq_float {
+          display: none !important;
+        }
+      `;
+      document.head.appendChild(styleTag);
+    } else {
+      const styleTag = document.createElement('style');
+      styleTag.innerHTML = `
+        #zsiq_float {
+          bottom: 40px !important;
+        }
+      `;
+      document.head.appendChild(styleTag);
+    }
+  </script>
+
+
+</html>

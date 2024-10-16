@@ -1,0 +1,289 @@
+.form-field {
+  border-radius: 3px;
+  border-color: #ccc;
+  border-width: 2px;
+  position: relative;
+  height: 52.2px;
+}
+
+.form-field-fix {
+  border-radius: 3px;
+  border-width: 2px;
+  position: relative;
+  height: 52.2px;
+}
+
+
+#inputError {
+  color: red;
+  border-color: red;
+}
+
+.inputError {
+  color: red;
+  border-color: red;
+}
+
+.app-footer {
+}
+
+h2 {
+  font-size: 16px;
+}
+
+h3 {
+  font-size: 14px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.textNormal {
+  font-size: 14px;
+}
+
+/* Works for Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.react-multi-carousel-list {
+  position: unset !important;
+}
+
+.react-multi-carousel-list button {
+  position: fix;
+  margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 800px) {
+  .react-multi-carousel-list button {
+    position: fix;
+    margin-bottom: 100px;
+  }
+}
+
+.ReactFlagsSelect-module_selectBtn__19wW7 {
+  border: none !important;
+}
+
+.react-multi-carousel-list button:hover {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  transition-delay: 0s;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.sidebar.open {
+  left: 0;
+}
+.sidenav {
+  overflow: hidden;
+  width: 0%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background-color: white;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.closeBtn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 390px;
+  color: white;
+  font-size: 50px;
+  cursor: pointer;
+  transform: translateY(-5px);
+  z-index: 75;
+}
+
+.mobileSellerText11 {
+  font-size: 11px;
+}
+
+.mobileSellerText12 {
+  font-size: 12px;
+}
+
+.custom-dots {
+  position: absolute;
+  top: -90px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+.custom-dots .slick-active > div {
+  background-color: #f5ab35;
+}
+.custom-arrows {
+  font-size: 30px;
+  position: absolute;
+  z-index: 10;
+  margin: auto 0;
+  top: 0;
+  bottom: 0;
+  height: 60px;
+  border-radius: 100%;
+  border: 1px solid white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.custom-arrows-mobile {
+  font-size: 10px;
+  position: absolute;
+  z-index: 10;
+  margin: auto 0;
+  top: 0;
+  bottom: 0;
+  height: 40px;
+  border-radius: 100%;
+  border: 1px solid white;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+
+.focused {
+  border: 2px solid #bdb8b7; /* Change the color to the desired color */
+}
+
+.priceKey {
+  color: #787878;
+  padding-right: 20px;
+  font-size: 16px;
+}
+
+.priceValue {
+  padding-right: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 16px;
+}
+
+.triangle {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white;
+}
+
+.skeleton-bg {
+  background: linear-gradient(to right, #eee 20%, #ddd 50%, #eee 80%);
+  background-size: 500px 100px;
+  animation-name: moving-gradient;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  border-radius: 5px;
+}
+
+.skeleton-bg-borderless {
+  background: linear-gradient(to right, #eee 20%, #ddd 50%, #eee 80%);
+  background-size: 500px 100px;
+  animation-name: moving-gradient;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+/* Add a transparent border initially and apply the border on hover */
+.link-container {
+  box-sizing: border-box; /* Ensure border doesn't affect dimensions */
+  border: 1px solid transparent; /* Set a transparent border initially */
+}
+
+.link-container:hover {
+  border-color: orange; /* Change border color on hover */
+}
+
+.bg-pendingStatus{
+  background-color: #ECC521;
+}
+
+.bg-returnrefund{
+  background-color: #5766EB;
+}
+
+.bg-cancelled{
+  background-color: #e21b1bc7;
+}
+
+/*skeleton*/
+@keyframes moving-gradient {
+  0% {
+    background-position: -250px 0;
+  }
+  100% {
+    background-position: 250px 0;
+  }
+}
+
+/*expand sidenav outwards*/
+@keyframes moveSidebar {
+  0% {
+    transform: translateX(-420px);
+    z-index: 100;
+  }
+  100% {
+    transform: translateX(-0px);
+  }
+}
+
+/*fade into existence*/
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.web-announcement-message {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  background:  #4169E1 !important;
+  --toastify-font-family:Poppins;
+  --toastify-text-color-light:white;
+}

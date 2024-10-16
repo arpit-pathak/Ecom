@@ -1,0 +1,110 @@
+#stripe-payment{
+	border: 1px solid var(--grey-border, #E0E0E0);
+background: var(--box, #F7FAFC);
+}
+#stripe-payment .FormGroup {
+	margin: 0 15px 20px;
+	padding: 0;
+	border-style: none;
+	background-color: white;
+	will-change: opacity, transform;
+	box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08), inset 0 1px 0 black;
+	border-radius: 4px;
+}
+
+#stripe-payment .FormRow {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	margin-left: 15px;
+	border-top: 1px solid #819efc;
+}
+
+#stripe-payment .StripeElement--webkit-autofill {
+	background: transparent !important;
+}
+
+#stripe-payment .StripeElement {
+	width: 100%;
+	padding: 11px 15px 11px 0;
+}
+
+#stripe-payment button {
+	border-radius: 4px;
+	background: var(--primary, #F5AB35);
+	padding: 10px 14px;
+	color: var(--white, #FFF);
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.pfield label{
+	color: var(--grey-labels, #4F5B76);
+font-family: Poppins;
+font-size: 13px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.custom-stripe-element{
+	border-radius: 6px;
+border: 2px solid var(--grey-border, #E0E0E0);
+background: var(--mono-white, #FFF);
+padding: 10px 12px;
+
+/* Inputs */
+box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.07);
+
+color: var(--black, #000);
+font-family: Poppins;
+font-size: 13px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.payment-success{
+	border: 1px solid var(--grey-border, #E0E0E0);
+	background: var(--box, #F7FAFC);
+	text-align: center;
+	margin: 32px 0;
+}
+
+.payment-success .info span:first-child{
+	color: #828282;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 29.977px; /* 166.539% */
+text-align: left;
+}
+.payment-success .info span:last-child{
+	color: #282828;
+text-align: center;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 29.977px; /* 166.539% */
+text-align: right;
+}
+#stripe-payment .Thank-you{
+	color: black
+}
+#stripe-payment .error{
+	color: red
+}
+
+.loader {
+	animation: spin 2s linear infinite;
+  }
+
+@keyframes spin {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+  }
+

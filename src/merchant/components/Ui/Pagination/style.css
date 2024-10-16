@@ -1,0 +1,162 @@
+.listing-page .pagination {
+  display: inline-block;
+  width: 100%;
+  margin: 15px 0;
+  padding: 0 20px;
+  position: relative;
+}
+
+.listing-page .pagination .entry {
+  float: left;
+}
+
+.listing-page .pagination .entry select {
+  width: 60px;
+  height: 24px;
+  margin-right: 5px;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 2px 10px;
+  background-position-x: 98%;
+  background-position-y: 0px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.listing-page .pagination .pager {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 50%;
+  font-size: 14px;
+  color: rgba(42, 42, 42, 0.7);
+  text-align: center;
+
+}
+
+.listing-page .pagination .pager ul {
+  float: left;
+  margin-left: 12px;
+  margin-right: 12px;
+  position: relative;
+  top: -3px;
+}
+
+.listing-page .pagination .pager ul li {
+  padding: 5px 12px;
+  text-align: center;
+  background: rgba(245, 171, 53, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all ease 0.4s;
+  display: inline-block;
+  margin-right: 12px;
+  color: #333333;
+}
+
+.listing-page .pagination .pager ul li:last-child {
+  margin-right: 0;
+}
+
+.listing-page .pagination .pager ul li:hover,
+.listing-page .pagination .pager ul li.active {
+  background-color: #F5AB35;
+  color: #fff;
+}
+
+.listing-page .pagination .pager .controls {
+  cursor: pointer;
+}
+
+.listing-page .pagination .pager .controls span {
+  text-decoration-line: underline;
+}
+
+.listing-page .pagination .pager .controls:first-child {
+  float: left;
+}
+
+.listing-page .pagination .pager .controls:last-child {
+  float: right;
+}
+
+.listing-page .pagination .pager .controls span,
+.listing-page .pagination .pager .controls svg {
+  display: inline-block;
+}
+
+.listing-page .pagination .entry span,
+.listing-page .pagination .showing {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #333333;
+}
+
+.listing-page .pagination .showing {
+  float: right;
+}
+
+
+
+.listing-page .pagination .orders_pages_pager {
+  position: absolute;
+  margin: 0 auto;
+  left: auto;
+  right: 0;
+  font-size: 14px;
+  color: rgba(42, 42, 42, 0.7);
+  text-align: right;
+}
+
+.listing-page .pagination .orders_pages_pager ul {
+  float: left;
+  margin-left: 12px;
+  margin-right: 12px;
+  position: relative;
+  top: -3px;
+}
+
+.listing-page .pagination .orders_pages_pager ul li {
+  padding: 5px 12px;
+  text-align: center;
+  background: rgba(245, 171, 53, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all ease 0.4s;
+  display: inline-block;
+  margin-right: 12px;
+  color: #333333;
+}
+
+.listing-page .pagination .orders_pages_pager ul li:last-child {
+  margin-right: 0;
+}
+
+.listing-page .pagination .orders_pages_pager ul li:hover,
+.listing-page .pagination .orders_pages_pager ul li.active {
+  background-color: #F5AB35;
+  color: #fff;
+}
+
+.listing-page .pagination .orders_pages_pager .controls {
+  cursor: pointer;
+}
+
+.listing-page .pagination .orders_pages_pager .controls span {
+  text-decoration-line: underline;
+}
+
+.listing-page .pagination .orders_pages_pager .controls:first-child {
+  float: left;
+}
+
+.listing-page .pagination .orders_pages_pager .controls:last-child {
+  float: right;
+}
+
+.listing-page .pagination .orders_pages_pager .controls span,
+.listing-page .pagination .orders_pages_pager .controls svg {
+  display: inline-block;
+}

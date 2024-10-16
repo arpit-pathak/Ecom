@@ -1,0 +1,27 @@
+.progress{
+  height: 15px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.progress-bar {
+  float: left;
+  width: 0;
+  height: 100%;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  transition: width 0.6s ease;
+    background-color: #F5AB35;
+    color: white;
+  }
+
+  .customDatePickerWidth, 
+.customDatePickerWidth > div.react-datepicker-wrapper, 
+.customDatePickerWidth > div > div.react-datepicker__input-container
+.customDatePickerWidth > div > div.react-datepicker__input-container input {
+   width: 100%;
+}

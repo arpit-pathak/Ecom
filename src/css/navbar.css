@@ -1,0 +1,190 @@
+.merchant-db .navbar,
+.app-merchant .navbar{
+    padding: 35px 55px;
+    position: fixed;
+    z-index: 10;
+}
+.merchant-db .navbar .logo,
+.app-merchant .navbar .logo{
+    display: inline-block;
+}
+.merchant-db .navbar .logo-alt,
+.app-merchant .navbar .logo-alt{
+    display: none;
+}
+.merchant-db .loggedin{
+    position: relative;
+    background-color: #f5ab35 !important;
+    padding: 13px 35px;
+}
+.merchant-db .loggedin .logo > img{
+    height: 33px;
+}
+.merchant-db .user-menu {
+    float: right;
+    margin-top: 4px;
+    position: relative;
+}
+.merchant-db .user-menu > img,
+.merchant-db .user-menu > div{
+    cursor: pointer;
+    width: 30px;
+    margin-left: 14px;
+    float: right;
+}
+.merchant-db .user-menu .nav-bell{
+    color: #fff;
+    font-size: 30px;
+}
+.merchant-db .user-menu .nav-user{
+    background: #fff;
+    color: #f5ab35;
+    padding: 7px 5px;
+    text-align: center;
+    border-radius: 100%;
+}
+.merchant-db .user-menu .nav-user svg{
+    margin: 0 auto;
+}
+.merchant-db .user-menu > div > .options{
+    background: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    right: -32px;
+    top: 31px;
+    color: #1a1a1a;
+    width: 200px;
+    display: none;
+}
+.merchant-db .user-menu > div:hover > .options{
+    display: block;
+}
+.merchant-db .user-menu .options > div{
+    text-align: center;
+    float: left;
+    width: 33%;
+    transition: all ease 0.5s;
+}
+.merchant-db .user-menu .options > div:hover{
+    color:#f5ab35;
+}
+.merchant-db .user-menu .options > div > svg{
+    font-size: 26px;
+    display: block;
+    margin: 0 auto;
+}
+.merchant-db .user-menu .options > div > span{
+    display: block;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+.merchant-db .menu
+{
+  display: none;
+  position: relative;
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+  float: left;
+  top: 7px;
+  margin-right: 10px;
+}
+
+.merchant-db .menu span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #fff;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+.merchant-db .menu span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+.merchant-db .menu span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+.merchant-db .menu input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+ .merchant-db .menu input:checked ~ span
+ {
+   opacity: 1;
+   transform: rotate(45deg) translate(-2px, -1px);
+   background: #232323;
+ }
+.merchant-db .menu input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+.merchant-db .menu input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+
+@media (max-width: 1024px) { 
+    .merchant-db .navbar .logo{
+        display: none;
+    }
+    .merchant-db .navbar .logo-alt{
+        display: block;
+    }
+    .merchant-db .loggedin .logo-alt {
+        display: none;
+    }
+    .merchant-db .loggedin .logo{
+        display: inline-block;
+    }
+    .merchant-db .navbar{
+        position:relative;
+        background-color: white;
+    }
+    .merchant-db .loggedin {
+        padding: 15px 20px;
+    }
+    .merchant-db .menu{
+        display: block;
+    }
+  }
+  @media (max-width: 768px){
+  .merchant-db .loggedin {
+      padding: 15px;
+  }
+}

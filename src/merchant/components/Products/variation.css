@@ -1,0 +1,38 @@
+.vtable{
+    border: 1px solid grey;
+    display: flex;
+}
+
+.vtable-header{
+    display: flex;
+    background-color: darkgrey;
+}
+.vtable-contents{
+    display: flex;
+}
+
+
+.vtable-header > div{
+    text-align: center;
+}
+.vtable-header > div,
+.vtable-contents >div,
+.vtable > div{
+    flex: 1;
+    border-right: 1px solid grey;
+}
+.vtable-header > div:last-child,
+.vtable-contents > div:last-child,
+.vtable > div:last-child{
+    border-right: none;
+}
+
+.vtable > div:last-child{
+    overflow-x: auto;
+}
+
+.vtable-variation-metadata .vtable-header >div,
+.vtable-variation-metadata .vtable-contents >div{
+    flex: 0 0 auto; 
+    width: 200px;
+}
