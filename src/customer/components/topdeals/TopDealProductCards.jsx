@@ -196,11 +196,7 @@ const TopDealProductCards = ({ product }) => {
       )}
 
       <div className="flex flex-col px-4 pt-3 pb-1 h-[100px] md:h-[114px] justify-between">
-        <p
-          className="capitalize text-black w-full break-normal text-sm font-medium
-                  overflow-hidden text-ellipsis max-[530px]:text-xs max-[415px]:text-[10px]
-                  h-[38px] flex flex-col justify-start leading-tight"
-        >
+        <p className="text-xs md:text-sm font-semibold text-wrap">
           {trimName(product.name, 50)}
         </p>
 

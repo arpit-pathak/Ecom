@@ -1,9 +1,8 @@
-import Form from '../../../generic/Forms'
-import { ApiCalls, AdminApis, HttpStatus } from '../../../../utils';
-import { showToast } from '../../../generic/Alerts';
-import { GridStyle } from '../../../../styles/FormStyles';
-import useAuth from '../../../../hooks/UseAuth';
-
+import Form from "../../../generic/Forms";
+import { ApiCalls, AdminApis, HttpStatus } from "../../../../utils";
+import { showToast } from "../../../generic/Alerts";
+import { GridStyle } from "../../../../styles/FormStyles";
+import useAuth from "../../../../hooks/UseAuth";
 
 export default function AddEditPlatformVoucherForm({ onClose, props }) {
   const auth = useAuth();
@@ -34,6 +33,26 @@ export default function AddEditPlatformVoucherForm({ onClose, props }) {
       type: "datepicker",
       label: "To Date",
       defaultValue: props?.to_date ? new Date(props.to_date) : new Date(),
+    },
+    {
+      name: "voucher_visibility",
+      type: "select",
+      label: "Voucher Visibility",
+      options: [
+        { value: "private", label: "Private" },
+        { value: "public", label: "Public" },
+      ],
+      defaultValue: props?.voucher_visibility ?? "private",
+    },
+    {
+      name: "voucher_redeem_type",
+      type: "select",
+      label: "Voucher Redeem Type",
+      options: [
+        { value: "cashback", label: "Cashback" },
+        { value: "discount", label: "Discount" },
+      ],
+      defaultValue: props?.voucher_redeem_type ?? "discount",
     },
     {
       name: "target_buyer",
@@ -99,25 +118,26 @@ export default function AddEditPlatformVoucherForm({ onClose, props }) {
   ];
 
   /*
-  * Should only perform API calls here and not in the generic form component
-  * Since we want to keep the generic form component in a OCP(Open-closed Principle) state
-  */
+   * Should only perform API calls here and not in the generic form component
+   * Since we want to keep the generic form component in a OCP(Open-closed Principle) state
+   */
   const handleConfirmation = async (formData) => {
     let url = AdminApis.addVoucher;
     if (props?.id_voucher) {
-      url = `${AdminApis.editVoucher}${props.id_voucher}/`
+      url = `${AdminApis.editVoucher}${props.id_voucher}/`;
     }
 
     await ApiCalls(url, "POST", formData, false, auth.token.access)
-      .then(response => {
+      .then((response) => {
         if (response.status === HttpStatus.HTTP_200_OK) {
-          showToast(response.data.message, "success", "add-platform")
-          onClose({ update: true })
+          showToast(response.data.message, "success", "add-platform");
+          onClose({ update: true });
         }
-      }).catch(error => {
-        showToast(error.response.data.message, "error")
+      })
+      .catch((error) => {
+        showToast(error.response.data.message, "error");
       });
-  }
+  };
 
   return (
     <>
@@ -129,7 +149,5 @@ export default function AddEditPlatformVoucherForm({ onClose, props }) {
         validationRequired={true}
       />
     </>
-  )
-
+  );
 }
-
