@@ -39,7 +39,7 @@ const EmailTable = () => {
       }).catch(error => {
         showToast(error.response.data.message, "error", "email-template-error")
       });
-  }, [auth]);
+  }, [auth.token.access]); // Only depend on the auth token
 
   useEffect(() => {
     getData();

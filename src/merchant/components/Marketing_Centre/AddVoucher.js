@@ -37,6 +37,8 @@ const errObj = {
   maximum_discount: "",
   is_multiple_redeem: "",
   usage_per_day: "",
+  voucher_visiblity: "",
+  voucher_redeem_type: "",
 };
 
 const voucherObj = {
@@ -52,6 +54,8 @@ const voucherObj = {
   maximum_discount: "",
   is_multiple_redeem: false,
   usage_per_day: "",
+  voucher_visiblity: "",
+  voucher_redeem_type: "",
 };
 
 class AddVoucherSeller extends React.Component {
@@ -66,7 +70,7 @@ class AddVoucherSeller extends React.Component {
     this.discountTypes = [
       //{ value: "", label: "Select discount type" },
       { value: "percentage", label: "Percentage" },
-      {value: "fixed", label: "Amount"},  //this option not for now; may be to add later
+      { value: "fixed", label: "Amount" }, //this option not for now; may be to add later
     ];
 
     let existVoucherObj;

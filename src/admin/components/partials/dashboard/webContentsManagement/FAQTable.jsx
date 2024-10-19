@@ -82,7 +82,7 @@ const FAQTable = () => {
             }).catch(error => {
                 showToast(error.response.data.message, "error", "faq-contents")
             });
-    }, [auth, faqChoices.length, faqCategories.length, faqSubCategories.length]);
+    }, [auth.token.access]); // Only depend on the auth token
 
 
     useEffect(() => {
@@ -387,4 +387,3 @@ const FAQTable = () => {
     );
 }
 export default FAQTable;
-

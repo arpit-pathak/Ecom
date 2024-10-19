@@ -61,7 +61,7 @@ const BlogsTable = () => {
             }).catch(error => {
                 showToast(error.response.data.message, "error", "blog-contents")
             });
-    }, [auth, categoryChoices]);
+    }, [auth.token.access]); // Only depend on the auth token
 
 
     useEffect(() => {
@@ -197,4 +197,3 @@ const BlogsTable = () => {
     );
 }
 export default BlogsTable;
-
